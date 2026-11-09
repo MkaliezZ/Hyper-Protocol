@@ -1,0 +1,46 @@
+policy_id: hp.utility
+version: 0.1-draft
+status: draft
+adoption: proposed
+maintainer: null
+selection_basis: null
+scope:
+  subjects:
+  - 桌面工具与小组件
+  tasks:
+  - 用户控制、状态语义与环境适配
+  conditions:
+  - 按当前任务选择并明确适用范围
+  exclusions:
+  - 未获得的权限、未支持的能力与超出证据范围的结论
+goals:
+- 用户控制、状态语义与环境适配
+priorities:
+- 事实与证据门槛优先；其余取舍按本项目已明确目标决定
+rules:
+- rule_id: utility.J01
+  kind: hard_gate
+  when: 准备形成或交付本领域结论时
+  requirement: 显示与状态对应，修改保留用户控制并核对目标环境。
+  rationale: 结论应保持在实际对象与证据支持的范围内。
+  evidence_required:
+  - 配置、目标桌面环境、状态和恢复记录
+  evaluation_method: mixed
+  positive_example: 分别检查时间语义、配置恢复和目标桌面行为。
+  counterexample: 逻辑检查通过即声称任务栏或全部平台实际可用。
+  missing_behavior: 记录缺项与影响，只交付有依据的部分；不推定已完成未进行的评议。
+quality_dimensions:
+- dimension_id: utility.Q01
+  criterion: 可读性、控制清晰度和日常稳定性
+preferences:
+- 表达、形式与实现参数按项目配置，保留适用理由
+decision_authority:
+  automated_scope:
+  - 当前任务已授权的候选稿、结构检查与记录
+  reserved_decisions:
+  - 目标平台验收
+  - 用户长期体验
+revisions:
+- 从 v0.1 产品线映射提炼的起始草案，未逐条获专业审定或部署。
+extensions:
+  display_name: 桌面工具与小组件

@@ -1,0 +1,406 @@
+{
+  "protocol_version": "0.2-draft",
+  "bundle_id": "example.review_pending",
+  "nature": "synthetic_example",
+  "scenario": {
+    "scenario_id": "example.learning.001",
+    "subjects": [
+      "合成学习者"
+    ],
+    "problem": "方程解答漏掉乘数",
+    "goal": "产生针对本次原答的候选反馈",
+    "deliverables": [
+      "候选反馈和后续练习"
+    ],
+    "constraints": [],
+    "acceptance_level": "reviewed_output",
+    "required_reviews": [
+      "domain",
+      "human_acceptance"
+    ],
+    "current_state": "deliver",
+    "extensions": {}
+  },
+  "policy_packs": [
+    {
+      "policy_id": "hp.education",
+      "version": "0.1-draft",
+      "status": "draft",
+      "adoption": "selected_for_task",
+      "maintainer": null,
+      "selection_basis": "合成案例中显式选择，非真实用户授权",
+      "scope": {
+        "subjects": [
+          "超维伴学"
+        ],
+        "tasks": [
+          "学习目标、任务与反馈"
+        ],
+        "conditions": [
+          "按当前任务选择并明确适用范围"
+        ],
+        "exclusions": [
+          "未获得的权限、未支持的能力与超出证据范围的结论"
+        ]
+      },
+      "goals": [
+        "学习目标、任务与反馈"
+      ],
+      "priorities": [
+        "事实与证据门槛优先；其余取舍按本项目已明确目标决定"
+      ],
+      "rules": [
+        {
+          "rule_id": "education.J01",
+          "kind": "hard_gate",
+          "when": "准备形成或交付本领域结论时",
+          "requirement": "反馈引用实际作答与标准，区分帮助条件和本次表现。",
+          "rationale": "结论应保持在实际对象与证据支持的范围内。",
+          "evidence_required": [
+            "实际题目、原答、任务标准与帮助条件"
+          ],
+          "evaluation_method": "mixed",
+          "positive_example": "指出原答具体差距并安排下一次可做的练习。",
+          "counterexample": "由一次经提示答对推断长期独立掌握。",
+          "missing_behavior": "记录缺项与影响，只交付有依据的部分；不推定已完成未进行的评议。"
+        }
+      ],
+      "quality_dimensions": [
+        {
+          "dimension_id": "education.Q01",
+          "criterion": "反馈是否准确、具体并能指导下一次行动"
+        }
+      ],
+      "preferences": [
+        "表达、形式与实现参数按项目配置，保留适用理由"
+      ],
+      "decision_authority": {
+        "automated_scope": [
+          "当前任务已授权的候选稿、结构检查与记录"
+        ],
+        "reserved_decisions": [
+          "长期掌握结论",
+          "正式教学评价"
+        ]
+      },
+      "revisions": [
+        "从 v0.1 产品线映射提炼的起始草案，未逐条获专业审定或部署。"
+      ],
+      "extensions": {
+        "display_name": "超维伴学"
+      }
+    }
+  ],
+  "capabilities": [
+    {
+      "capability_id": "example.feedback",
+      "version": "1",
+      "action": "create_draft",
+      "inputs": [
+        "题目",
+        "原答"
+      ],
+      "outputs": [
+        "候选反馈"
+      ],
+      "preconditions": [
+        "材料在本次允许范围内"
+      ],
+      "policy_refs": [
+        {
+          "id": "hp.education",
+          "version": "0.1-draft"
+        }
+      ],
+      "authorization": {
+        "status": "granted",
+        "basis": "合成任务假设允许创建候选稿，不含发布",
+        "scope": [
+          "create_draft"
+        ],
+        "checked_at": "2026-11-08T00:00:00Z"
+      },
+      "side_effects": [
+        "保存候选稿"
+      ],
+      "implementation": "合成示范；没有真实服务调用",
+      "limits": [
+        "不推定长期掌握"
+      ],
+      "failure_and_recovery": "缺原答时仅报告缺项",
+      "completion_conditions": [
+        "实际产生候选反馈并记录本次范围"
+      ],
+      "extensions": {}
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "A1",
+      "version": "1",
+      "asset_type": "example",
+      "nature": "synthetic",
+      "source": "合成示范作者编写",
+      "locator": "inline:assets/A1",
+      "sha256": null,
+      "subject_scope": "本合成任务",
+      "usage_scope": "示范协议字段",
+      "availability": "available",
+      "snapshot_at": "2026-11-08T00:00:00Z",
+      "derived_from": [],
+      "content": "2(x+3)=10",
+      "extensions": {}
+    },
+    {
+      "asset_id": "A2",
+      "version": "1",
+      "asset_type": "example",
+      "nature": "synthetic",
+      "source": "合成示范作者编写",
+      "locator": "inline:assets/A2",
+      "sha256": null,
+      "subject_scope": "本合成任务",
+      "usage_scope": "示范协议字段",
+      "availability": "available",
+      "snapshot_at": "2026-11-08T00:00:00Z",
+      "derived_from": [],
+      "content": "x=10-3=7",
+      "extensions": {}
+    },
+    {
+      "asset_id": "A3",
+      "version": "1",
+      "asset_type": "example",
+      "nature": "synthetic",
+      "source": "合成示范作者编写",
+      "locator": "inline:assets/A3",
+      "sha256": null,
+      "subject_scope": "本合成任务",
+      "usage_scope": "示范协议字段",
+      "availability": "available",
+      "snapshot_at": "2026-11-08T00:00:00Z",
+      "derived_from": [
+        {
+          "asset_id": "A1",
+          "version": "1"
+        },
+        {
+          "asset_id": "A2",
+          "version": "1"
+        }
+      ],
+      "content": "你漏掉了括号外的乘数2。先两边同时除以2，再减3，得x=2；代回原式检查。接着解3(x+2)=15。",
+      "extensions": {}
+    },
+    {
+      "asset_id": "A4",
+      "version": "1",
+      "asset_type": "example",
+      "nature": "run_log",
+      "source": "合成示范作者编写",
+      "locator": "inline:assets/A4",
+      "sha256": null,
+      "subject_scope": "本合成任务",
+      "usage_scope": "示范协议字段",
+      "availability": "available",
+      "snapshot_at": "2026-11-08T00:00:00Z",
+      "derived_from": [],
+      "content": "合成示范回执：假设候选稿已经生成；未做专业、审美、人工或真实使用评议。",
+      "extensions": {}
+    }
+  ],
+  "decisions": [
+    {
+      "decision_id": "D1",
+      "subject_refs": [
+        {
+          "asset_id": "A3",
+          "version": "1"
+        }
+      ],
+      "policy_refs": [
+        {
+          "id": "hp.education",
+          "version": "0.1-draft"
+        }
+      ],
+      "judgment_status": "needs_review",
+      "scope": "仅满足本合成案例的候选稿范围",
+      "rationale": "反馈绑定原答、指出漏乘数并给下一步，未推定长期掌握。",
+      "evidence_refs": [
+        {
+          "asset_id": "A1",
+          "version": "1"
+        },
+        {
+          "asset_id": "A2",
+          "version": "1"
+        },
+        {
+          "asset_id": "A3",
+          "version": "1"
+        }
+      ],
+      "rule_checks": [
+        {
+          "rule_id": "education.J01",
+          "result": "met",
+          "evidence_refs": [
+            {
+              "asset_id": "A1",
+              "version": "1"
+            },
+            {
+              "asset_id": "A2",
+              "version": "1"
+            },
+            {
+              "asset_id": "A3",
+              "version": "1"
+            }
+          ],
+          "reason": "本次解释与原答对应。"
+        }
+      ],
+      "reviews": {
+        "engineering": {
+          "status": "not_run",
+          "scope": null,
+          "evidence_refs": [],
+          "reviewer_kind": "not_recorded",
+          "reason": null
+        },
+        "domain": {
+          "status": "not_run",
+          "scope": null,
+          "evidence_refs": [],
+          "reviewer_kind": "not_recorded",
+          "reason": null
+        },
+        "aesthetic": {
+          "status": "not_run",
+          "scope": null,
+          "evidence_refs": [],
+          "reviewer_kind": "not_recorded",
+          "reason": null
+        },
+        "human_acceptance": {
+          "status": "not_run",
+          "scope": null,
+          "evidence_refs": [],
+          "reviewer_kind": "not_recorded",
+          "reason": null
+        },
+        "real_world": {
+          "status": "not_run",
+          "scope": null,
+          "evidence_refs": [],
+          "reviewer_kind": "not_recorded",
+          "reason": null
+        }
+      },
+      "unknowns": [
+        "真实学习者帮助条件和理解均未知"
+      ],
+      "next_actions": [
+        "实际使用时按项目要求评议"
+      ],
+      "extensions": {}
+    }
+  ],
+  "runs": [
+    {
+      "run_id": "R1",
+      "capability_ref": {
+        "id": "example.feedback",
+        "version": "1"
+      },
+      "policy_refs": [
+        {
+          "id": "hp.education",
+          "version": "0.1-draft"
+        }
+      ],
+      "execution_status": "succeeded",
+      "executor": "合成示例中的执行者",
+      "implementation_version": "1",
+      "authorization_snapshot": {
+        "status": "granted",
+        "basis": "合成任务假设允许创建候选稿，不含发布",
+        "scope": [
+          "create_draft"
+        ],
+        "checked_at": "2026-11-08T00:00:00Z"
+      },
+      "input_refs": [
+        {
+          "asset_id": "A1",
+          "version": "1"
+        },
+        {
+          "asset_id": "A2",
+          "version": "1"
+        }
+      ],
+      "output_refs": [
+        {
+          "asset_id": "A3",
+          "version": "1"
+        }
+      ],
+      "runtime_evidence_refs": [
+        {
+          "asset_id": "A4",
+          "version": "1"
+        }
+      ],
+      "started_at": "2026-11-08T00:00:00Z",
+      "ended_at": "2026-11-08T00:00:01Z",
+      "failure": null,
+      "extensions": {}
+    }
+  ],
+  "delivery": {
+    "status": "partial",
+    "scope": "候选稿已生成；正式教学交付待专业与教师评议",
+    "artifact_refs": [
+      {
+        "asset_id": "A3",
+        "version": "1"
+      }
+    ],
+    "decision_refs": [
+      "D1"
+    ],
+    "blocking_gaps": [
+      {
+        "code": "HUMAN_REVIEW_PENDING",
+        "description": "待指定角色评议",
+        "affected_actions": [
+          "正式教学交付"
+        ],
+        "next_action": "提供原答、候选稿、依据和推荐给评议者"
+      }
+    ],
+    "remaining_items": [],
+    "claims": [
+      {
+        "kind": "fact",
+        "text": "合成作答写作x=10-3=7。",
+        "scope": "本合成素材",
+        "evidence_refs": [
+          {
+            "asset_id": "A2",
+            "version": "1"
+          }
+        ]
+      }
+    ],
+    "next_actions": [
+      "真实采用时核对实际作答和必要评议"
+    ]
+  },
+  "extensions": {
+    "example_notice": "所有人物、权限、运行时间和回执均为合成示范，不代表真实运行或教学效果。"
+  }
+}

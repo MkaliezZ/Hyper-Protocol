@@ -1,0 +1,46 @@
+policy_id: hp.consulting
+version: 0.1-draft
+status: draft
+adoption: proposed
+maintainer: null
+selection_basis: null
+scope:
+  subjects:
+  - 学校项目研究与咨询
+  tasks:
+  - 长期能力、可兑现价值与学生适配
+  conditions:
+  - 按当前任务选择并明确适用范围
+  exclusions:
+  - 未获得的权限、未支持的能力与超出证据范围的结论
+goals:
+- 长期能力、可兑现价值与学生适配
+priorities:
+- 事实与证据门槛优先；其余取舍按本项目已明确目标决定
+rules:
+- rule_id: consulting.J01
+  kind: hard_gate
+  when: 准备形成或交付本领域结论时
+  requirement: 区分资源存在、目标人群准入和个体实际获得。
+  rationale: 结论应保持在实际对象与证据支持的范围内。
+  evidence_required:
+  - 项目官方内容、准入机制、实际画像与比较依据
+  evaluation_method: mixed
+  positive_example: 写明目标人群、进入条件、行动、代价和失效点。
+  counterexample: 将机构合作或历史去向写成学生保证获得的权益。
+  missing_behavior: 记录缺项与影响，只交付有依据的部分；不推定已完成未进行的评议。
+quality_dimensions:
+- dimension_id: consulting.Q01
+  criterion: 机制解释、决策增量、长期价值与适配
+preferences:
+- 表达、形式与实现参数按项目配置，保留适用理由
+decision_authority:
+  automated_scope:
+  - 当前任务已授权的候选稿、结构检查与记录
+  reserved_decisions:
+  - 录取结果
+  - 个体预算或申请决定
+revisions:
+- 从 v0.1 产品线映射提炼的起始草案，未逐条获专业审定或部署。
+extensions:
+  display_name: 学校项目研究与咨询

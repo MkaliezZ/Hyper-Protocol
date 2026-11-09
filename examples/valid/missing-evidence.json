@@ -1,0 +1,46 @@
+{
+  "protocol_version": "0.2-draft",
+  "bundle_id": "example.missing_evidence",
+  "nature": "synthetic_example",
+  "scenario": {
+    "scenario_id": "example.missing",
+    "subjects": [
+      "合成学习者"
+    ],
+    "problem": null,
+    "goal": "对实际作答生成反馈",
+    "deliverables": [],
+    "constraints": [],
+    "acceptance_level": "draft_output",
+    "required_reviews": [],
+    "current_state": "await_input",
+    "extensions": {}
+  },
+  "policy_packs": [],
+  "capabilities": [],
+  "assets": [],
+  "decisions": [],
+  "runs": [],
+  "delivery": {
+    "status": "partial",
+    "scope": "已界定任务，尚缺原答，不能作出具体反馈",
+    "artifact_refs": [],
+    "decision_refs": [],
+    "blocking_gaps": [
+      {
+        "code": "EVIDENCE_MISSING",
+        "description": "未取得本次原答",
+        "affected_actions": [
+          "针对原答作出评价"
+        ],
+        "next_action": "取得原答；可先整理目标和任务标准"
+      }
+    ],
+    "remaining_items": [],
+    "claims": [],
+    "next_actions": [
+      "请求本次原答，继续整理已有任务要求"
+    ]
+  },
+  "extensions": {}
+}

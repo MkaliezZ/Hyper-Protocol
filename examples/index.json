@@ -1,0 +1,66 @@
+{
+  "nature": "synthetic_examples_only",
+  "cases": [
+    {
+      "path": "../templates/task-bundle.json",
+      "expected_valid": true
+    },
+    {
+      "path": "valid/draft-feedback.json",
+      "expected_valid": true
+    },
+    {
+      "path": "valid/missing-evidence.json",
+      "expected_valid": true
+    },
+    {
+      "path": "valid/review-pending.json",
+      "expected_valid": true
+    },
+    {
+      "path": "invalid/denied-action.json",
+      "expected_valid": false,
+      "expected_error": "AUTHORIZATION_NOT_GRANTED"
+    },
+    {
+      "path": "invalid/stale-version.json",
+      "expected_valid": false,
+      "expected_error": "REFERENCE_UNRESOLVED"
+    },
+    {
+      "path": "invalid/hard-gate-failed.json",
+      "expected_valid": false,
+      "expected_error": "HARD_GATE_UNSATISFIED"
+    },
+    {
+      "path": "invalid/inferred-review.json",
+      "expected_valid": false,
+      "expected_error": "REVIEW_EVIDENCE_MISSING"
+    },
+    {
+      "path": "invalid/revoked-input.json",
+      "expected_valid": false,
+      "expected_error": "ASSET_UNAVAILABLE"
+    },
+    {
+      "path": "invalid/missing-runtime-evidence.json",
+      "expected_valid": false,
+      "expected_error": "EXECUTION_EVIDENCE_MISSING"
+    },
+    {
+      "path": "invalid/unbound-required-policy.json",
+      "expected_valid": false,
+      "expected_error": "CAPABILITY_POLICY_UNBOUND"
+    },
+    {
+      "path": "invalid/false-human-acceptance.json",
+      "expected_valid": false,
+      "expected_error": "HUMAN_ACCEPTANCE_MISATTRIBUTED"
+    },
+    {
+      "path": "invalid/premature-reviewed-delivery.json",
+      "expected_valid": false,
+      "expected_error": "REQUIRED_REVIEW_PENDING"
+    }
+  ]
+}

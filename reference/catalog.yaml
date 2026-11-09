@@ -1,0 +1,9 @@
+authority: non_normative_reference
+load_policy: on_demand_only
+files:
+- path: 01-完整协议定义.md
+  purpose: v0.1 完整定义、12 产品线映射、使用与开源方案
+- path: 02-三层接入模板.md
+  purpose: 原始文字模板和三个示例；迁移时按 COMPATIBILITY.md 对照
+- path: 03-项目来源与蒸馏说明.md
+  purpose: 项目来源索引、通用机制、项目特有内容及新增设计范围

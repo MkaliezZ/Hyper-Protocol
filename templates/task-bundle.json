@@ -1,0 +1,33 @@
+{
+  "protocol_version": "0.2-draft",
+  "bundle_id": "replace-with-task-id",
+  "nature": "template",
+  "scenario": {
+    "scenario_id": "replace-with-scenario-id",
+    "subjects": [],
+    "problem": null,
+    "goal": null,
+    "deliverables": [],
+    "constraints": [],
+    "acceptance_level": "draft_output",
+    "required_reviews": [],
+    "current_state": "intake",
+    "extensions": {}
+  },
+  "policy_packs": [],
+  "capabilities": [],
+  "assets": [],
+  "decisions": [],
+  "runs": [],
+  "delivery": {
+    "status": "in_progress",
+    "scope": null,
+    "artifact_refs": [],
+    "decision_refs": [],
+    "blocking_gaps": [],
+    "remaining_items": [],
+    "claims": [],
+    "next_actions": []
+  },
+  "extensions": {}
+}

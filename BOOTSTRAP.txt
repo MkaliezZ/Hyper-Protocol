@@ -1,0 +1,15 @@
+Hyper Protocol — v0.2.0-draft.1
+https://github.com/MkaliezZ/Hyper-Protocol
+
+将解压目录交给 Agent，发送以下任务即可：
+
+请先读取 AGENTS.md，并按其中路由加载超维协议。
+我的项目是：[项目及阶段]。
+本次要完成：[具体交付]。
+可用材料与已授权动作：[补充实际范围]。
+请完成已授权工作，并保留判断、执行、资产及缺项记录。
+
+不要只把 ZIP 当成已读取的内容；Agent 需要解压或取得实际文件。
+
+规范与文档：CC BY 4.0。代码与机器契约：Apache-2.0。
+完整范围见 LICENSE-NOTE.md；接入说明见 docs/GETTING-STARTED.md。

@@ -1,0 +1,46 @@
+policy_id: hp.research
+version: 0.1-draft
+status: draft
+adoption: proposed
+maintainer: null
+selection_basis: null
+scope:
+  subjects:
+  - 超维科研
+  tasks:
+  - 研究问题、方法与主张
+  conditions:
+  - 按当前任务选择并明确适用范围
+  exclusions:
+  - 未获得的权限、未支持的能力与超出证据范围的结论
+goals:
+- 研究问题、方法与主张
+priorities:
+- 事实与证据门槛优先；其余取舍按本项目已明确目标决定
+rules:
+- rule_id: research.J01
+  kind: hard_gate
+  when: 准备形成或交付本领域结论时
+  requirement: 主张强度与证据及方法相匹配，区分观察、解释和模拟。
+  rationale: 结论应保持在实际对象与证据支持的范围内。
+  evidence_required:
+  - 原始材料、方法、数据、参数与反例
+  evaluation_method: mixed
+  positive_example: 列出参数来源、反例和现实验证条件。
+  counterexample: 将合成模拟结果写成真实工艺或社会效果。
+  missing_behavior: 记录缺项与影响，只交付有依据的部分；不推定已完成未进行的评议。
+quality_dimensions:
+- dimension_id: research.Q01
+  criterion: 问题价值、方法适配、反证和复现信息
+preferences:
+- 表达、形式与实现参数按项目配置，保留适用理由
+decision_authority:
+  automated_scope:
+  - 当前任务已授权的候选稿、结构检查与记录
+  reserved_decisions:
+  - 现实效果认定
+  - 领域专业审定
+revisions:
+- 从 v0.1 产品线映射提炼的起始草案，未逐条获专业审定或部署。
+extensions:
+  display_name: 超维科研

@@ -1,0 +1,46 @@
+policy_id: hp.space
+version: 0.1-draft
+status: draft
+adoption: proposed
+maintainer: null
+selection_basis: null
+scope:
+  subjects:
+  - 超维空间岛屿与校园
+  tasks:
+  - 空间用途、事实、视觉与服务
+  conditions:
+  - 按当前任务选择并明确适用范围
+  exclusions:
+  - 未获得的权限、未支持的能力与超出证据范围的结论
+goals:
+- 空间用途、事实、视觉与服务
+priorities:
+- 事实与证据门槛优先；其余取舍按本项目已明确目标决定
+rules:
+- rule_id: space.J01
+  kind: hard_gate
+  when: 准备形成或交付本领域结论时
+  requirement: 分别核对地点事实、视觉表达、导航和真实服务状态。
+  rationale: 结论应保持在实际对象与证据支持的范围内。
+  evidence_required:
+  - 地点来源、几何或视觉参考、可用服务与身份依据
+  evaluation_method: mixed
+  positive_example: 用来源修正体量，查看实际画面，并单独测试路线和服务。
+  counterexample: 仅换颜色即宣称完成形体复原，或以展示页面证明正式服务接入。
+  missing_behavior: 记录缺项与影响，只交付有依据的部分；不推定已完成未进行的评议。
+quality_dimensions:
+- dimension_id: space.Q01
+  criterion: 辨识度、空间关系、可探索性与服务真实性
+preferences:
+- 表达、形式与实现参数按项目配置，保留适用理由
+decision_authority:
+  automated_scope:
+  - 当前任务已授权的候选稿、结构检查与记录
+  reserved_decisions:
+  - 正式主体接入
+  - 真实服务完成
+revisions:
+- 从 v0.1 产品线映射提炼的起始草案，未逐条获专业审定或部署。
+extensions:
+  display_name: 超维空间岛屿与校园

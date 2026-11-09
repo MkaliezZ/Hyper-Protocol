@@ -1,0 +1,46 @@
+policy_id: hp.device
+version: 0.1-draft
+status: draft
+adoption: proposed
+maintainer: null
+selection_basis: null
+scope:
+  subjects:
+  - AI Passport 与硬件应用
+  tasks:
+  - 读值、交互、设备行为与数据保护
+  conditions:
+  - 按当前任务选择并明确适用范围
+  exclusions:
+  - 未获得的权限、未支持的能力与超出证据范围的结论
+goals:
+- 读值、交互、设备行为与数据保护
+priorities:
+- 事实与证据门槛优先；其余取舍按本项目已明确目标决定
+rules:
+- rule_id: device.J01
+  kind: hard_gate
+  when: 准备形成或交付本领域结论时
+  requirement: 区分构建、主机检查、真机行为、显示换算和实际测量。
+  rationale: 结论应保持在实际对象与证据支持的范围内。
+  evidence_required:
+  - 固件与设备范围、原始读数、日志及对应实测
+  evaluation_method: mixed
+  positive_example: 保留原始读数和表显参数，逐项记录真机测量范围。
+  counterexample: 屏显 100% 即宣称实际电池容量已经校准。
+  missing_behavior: 记录缺项与影响，只交付有依据的部分；不推定已完成未进行的评议。
+quality_dimensions:
+- dimension_id: device.Q01
+  criterion: 可用性、状态含义、响应与故障恢复
+preferences:
+- 表达、形式与实现参数按项目配置，保留适用理由
+decision_authority:
+  automated_scope:
+  - 当前任务已授权的候选稿、结构检查与记录
+  reserved_decisions:
+  - 设备写入
+  - 实际容量或长期可靠性认定
+revisions:
+- 从 v0.1 产品线映射提炼的起始草案，未逐条获专业审定或部署。
+extensions:
+  display_name: AI Passport 与硬件应用

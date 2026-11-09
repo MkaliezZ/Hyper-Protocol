@@ -1,0 +1,46 @@
+policy_id: hp.portfolio
+version: 0.1-draft
+status: draft
+adoption: proposed
+maintainer: null
+selection_basis: null
+scope:
+  subjects:
+  - 作品集简历与个人网站
+  tasks:
+  - 贡献真实性、作品选择与阅读
+  conditions:
+  - 按当前任务选择并明确适用范围
+  exclusions:
+  - 未获得的权限、未支持的能力与超出证据范围的结论
+goals:
+- 贡献真实性、作品选择与阅读
+priorities:
+- 事实与证据门槛优先；其余取舍按本项目已明确目标决定
+rules:
+- rule_id: portfolio.J01
+  kind: hard_gate
+  when: 准备形成或交付本领域结论时
+  requirement: 表达与真实贡献对应，形式服务阅读和内容访问。
+  rationale: 结论应保持在实际对象与证据支持的范围内。
+  evidence_required:
+  - 真实作品、贡献说明、原件与实际页面
+  evaluation_method: mixed
+  positive_example: 核对内容与署名，测试交互并查看实际阅读顺序。
+  counterexample: 可打开页面即声称所有作品真实贡献或真机体验通过。
+  missing_behavior: 记录缺项与影响，只交付有依据的部分；不推定已完成未进行的评议。
+quality_dimensions:
+- dimension_id: portfolio.Q01
+  criterion: 真实性、信息选择、可访问性和视觉表达
+preferences:
+- 表达、形式与实现参数按项目配置，保留适用理由
+decision_authority:
+  automated_scope:
+  - 当前任务已授权的候选稿、结构检查与记录
+  reserved_decisions:
+  - 本人身份或贡献确认
+  - 外部公开发布
+revisions:
+- 从 v0.1 产品线映射提炼的起始草案，未逐条获专业审定或部署。
+extensions:
+  display_name: 作品集简历与个人网站
