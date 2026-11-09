@@ -4,12 +4,12 @@
 
 ## 1 获取发行版
 
-推荐使用 [v0.2.0-draft.1](https://github.com/MkaliezZ/Hyper-Protocol/releases/tag/v0.2.0-draft.1)。选择名为 `Hyper-Protocol-v0.2.0-draft.1-agent.zip` 的附件，解压后保留整个目录结构。包内附完整性清单，Release 另附 ZIP 的 SHA-256。
+推荐使用 [v0.2.0-draft.2](https://github.com/MkaliezZ/Hyper-Protocol/releases/tag/v0.2.0-draft.2)。选择名为 `Hyper-Protocol-v0.2.0-draft.2-agent.zip` 的附件，解压后保留整个目录结构。包内附完整性清单，Release 另附 ZIP 的 SHA-256。
 
 如果 Agent 能使用 Git，可以让它自行执行：
 
 ```text
-git clone --branch v0.2.0-draft.1 --depth 1 https://github.com/MkaliezZ/Hyper-Protocol.git
+git clone --branch v0.2.0-draft.2 --depth 1 https://github.com/MkaliezZ/Hyper-Protocol.git
 ```
 
 仓库当前 `main` 可能继续变化。任务开始时记录实际 tag 或 commit；恢复任务时不要默默切换规则版本。

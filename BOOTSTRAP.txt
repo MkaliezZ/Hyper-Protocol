@@ -1,4 +1,4 @@
-Hyper Protocol — v0.2.0-draft.1
+Hyper Protocol — v0.2.0-draft.2
 https://github.com/MkaliezZ/Hyper-Protocol
 
 将解压目录交给 Agent，发送以下任务即可：

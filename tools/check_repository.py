@@ -12,7 +12,7 @@ except ImportError as exc:
 
 ROOT = Path(__file__).resolve().parents[1]
 PAYLOAD_FILES = [
-    'README.md', 'AGENTS.md', 'CORE.md', 'BOOTSTRAP.txt', 'CHANGELOG.md',
+    'README.md', 'README.zh-CN.md', 'AGENTS.md', 'CORE.md', 'BOOTSTRAP.txt', 'CHANGELOG.md',
     'COMPATIBILITY.md', 'CONTRIBUTING.md', 'LICENSE', 'LICENSE-NOTE.md',
     'protocol.yaml', 'verification.json', '.gitignore', '.gitattributes',
 ]

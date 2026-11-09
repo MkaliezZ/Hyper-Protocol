@@ -1,10 +1,10 @@
 {
-  "release_version": "v0.2.0-draft.1",
+  "release_version": "v0.2.0-draft.2",
   "protocol_version": "0.2-draft",
   "scope": "repository_structure_and_declared_snapshot_consistency",
   "repository_checks": {
-    "files": 57,
-    "local_links": 37,
+    "files": 58,
+    "local_links": 57,
     "profiles": 12,
     "schema": "passed",
     "text_scan": "passed"

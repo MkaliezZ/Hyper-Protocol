@@ -1,78 +1,83 @@
 # Hyper Protocol
 
-**面向 Agent 的三层协作协议：判断层、功能层、资产层。**
+**English** | [简体中文](README.zh-CN.md)
 
-Hyper Protocol is an agent-oriented collaboration protocol for judgment, execution, and traceable assets. Start at [AGENTS.md](AGENTS.md); load only the rules relevant to the task.
+**An agent-oriented collaboration protocol with three layers: Judgment, Function, and Asset.**
 
-它让 Agent 在完成任务时说明：依据什么标准作出判断，怎样在授权范围内执行，以及材料和成果怎样追溯、复用与交接。适用于软件、研究、课程、内容生产、硬件应用和人工服务。
+Hyper Protocol helps agents explain the criteria behind their decisions, carry out work within the authorized scope, and preserve materials and results for traceability, reuse, and handoff. It applies to software, research, courses, content production, hardware applications, and human-delivered services.
 
-协议版本：`0.2-draft` · 发行版本：`v0.2.0-draft.1` · [下载 Agent 包](https://github.com/MkaliezZ/Hyper-Protocol/releases/tag/v0.2.0-draft.1) · [接入说明](docs/GETTING-STARTED.md)
+Protocol: `0.2-draft` · Release: `v0.2.0-draft.2` · [Download the Agent package](https://github.com/MkaliezZ/Hyper-Protocol/releases/tag/v0.2.0-draft.2) · [Integration guide](docs/GETTING-STARTED.md)
 
-## 直接交给 Agent
+## Hand it directly to an agent
 
-将下面的内容和你的项目材料一起发给 Agent：
+Send the following prompt together with your project materials:
 
 ```text
-请将 https://github.com/MkaliezZ/Hyper-Protocol 的 v0.2.0-draft.1
-作为本次任务的协作协议，获取该版本后先读取根目录 AGENTS.md，
-再按入口只加载相关领域包，不要一次读取全部参考附件。
+Use https://github.com/MkaliezZ/Hyper-Protocol at tag v0.2.0-draft.2
+as the collaboration protocol for this task. Fetch that version and read
+AGENTS.md at its root, then load only the domain profiles relevant to the task.
+Do not read all reference attachments by default.
 
-我的项目：[名称、位置、当前阶段]
-本次交付：[希望完成的具体结果]
-已有材料：[文件、链接、环境与已知事实]
-已授权动作及限制：[本次实际范围]
+Project: [name, location, current stage]
+Deliverable: [the specific outcome to produce]
+Inputs: [files, links, environment, and known facts]
+Authorized actions and limits: [the actual scope of this task]
 
-请按判断层、功能层、资产层组织工作，完成已授权任务，
-交付实际产物和可交接记录。缺项只限制依赖它的动作。
-若当前环境无法取得仓库文件，请明确说明缺什么，不能假装已读。
+Organize the work through Judgment, Function, and Asset responsibilities.
+Complete the authorized work and deliver actual artifacts and handoff records.
+A missing input should block only the actions that depend on it.
+If you cannot access the repository files, identify what is missing;
+do not claim to have read them.
 ```
 
-Agent 能获取仓库文件即可开始使用，不需要 API 密钥、全局安装、专用客户端或后台服务。Python 校验工具按需使用。
+An agent can start once it can access the repository files. Using the protocol itself requires no API key, global installation, dedicated client, or background service. Python validation tools are optional.
 
-也可以下载 Release ZIP，解压后将整个目录交给 Agent，并说明：“先读取这个目录的 `AGENTS.md`，再处理我的具体任务。”
+You can also download a Release ZIP, extract it, and give the entire directory to an agent with the instruction: “Read this directory's `AGENTS.md` first, then carry out my specific task.”
 
-## 三层怎样分工
+## The three layers
 
-| 层 | 责任 | 典型输出 |
+| Layer | Responsibility | Typical outputs |
 | --- | --- | --- |
-| 判断层 judgment | 对象与目标、价值取舍、专业标准、证据、方法、质量与审美、决定权限 | 判断规则包、量规、正反例、判断记录 |
-| 功能层 function | 能力契约、权限核验、工具和模型调用、状态、检查与恢复 | 实际产物、可调用能力、执行回执 |
-| 资产层 asset | 来源、身份、版本、定位、使用范围、派生关系与生命周期 | 原件、引用、方法、成果与交接记录 |
+| Judgment | Subjects and goals, value tradeoffs, professional standards, evidence, methods, quality and aesthetics, decision authority | Policy packs, rubrics, positive and negative examples, decision records |
+| Function | Capability contracts, authorization checks, tool and model calls, state, validation, and recovery | Actual artifacts, callable capabilities, run receipts |
+| Asset | Provenance, identity, versions, locators, usage scope, derivation, and lifecycle | Originals, references, methods, results, and handoff records |
 
-三层是职责边界，可以由人、普通代码、模型或它们的组合承担。审美保留在判断层中。
+These are responsibility boundaries. People, ordinary code, models, or combinations of them can fulfill each responsibility. Aesthetic judgment remains part of the Judgment layer.
 
-## Agent 的读取顺序
+## Agent reading order
 
 ```text
 AGENTS.md
   → protocol.yaml + CORE.md
-  → profiles/catalog.yaml → 本次相关的领域包
+  → profiles/catalog.yaml → task-relevant domain profiles
   → templates/task-bundle.json + schemas/task-bundle.schema.json
-  → 按需查看 examples/、reference/ 和兼容说明
+  → examples/, reference/, and compatibility notes only as needed
 ```
 
-执行时区分权限、运行、判断和分项评议。`succeeded` 不自动推出专业通过、审美认可、人工确认或真实效果。
+Keep authorization, execution, judgment, and individual reviews separate. `succeeded` does not automatically mean that domain quality, aesthetics, human acceptance, or real-world effectiveness has passed review.
 
-## 在自己的项目中接入
+## Integrate it into your project
 
-1. 把本仓库放入独立目录，例如 `protocols/hyper-protocol/`，并固定发行版本或 commit。
-2. 向 Agent 明确本次项目、交付和已有授权，再让它从入口按需加载。
-3. 选择或提出领域规则，复制任务模板，绑定实际材料和版本。
-4. 完成一个真实任务，保留产物、判断、回执和缺项；按项目需要运行可选校验。
+1. Keep the repository in a separate directory, such as `protocols/hyper-protocol/`, and pin a release or commit.
+2. Tell the agent the project, deliverable, and existing authorization, then have it follow the entrypoint.
+3. Select or propose domain rules, copy the task template, and bind the actual inputs and versions.
+4. Complete a real task and retain its artifacts, judgments, receipts, and gaps. Run optional validation when the project needs it.
 
-完整步骤、能力不足时的处理、如何扩展领域包见 [接入说明](docs/GETTING-STARTED.md)。可直接复制的中英文提示词见 [Agent 接入提示词](docs/AGENT-PROMPTS.md)。
+See the [integration guide](docs/GETTING-STARTED.md) for detailed steps, limited-capability environments, and domain extensions. Copy-ready Chinese and English prompts are in [Agent prompts](docs/AGENT-PROMPTS.md).
 
-本仓库无需覆盖你现有的项目 `AGENTS.md`。项目可以在自己的入口中引用本协议目录，并保留宿主与用户的实际权限边界。
+You do not need to overwrite your project's existing `AGENTS.md`. Its entrypoint can reference this protocol directory while preserving the host's instruction hierarchy and the user's actual authorization.
 
-## 领域包与记录
+Both READMEs provide the same onboarding information. The detailed protocol, domain profiles, and integration guide are currently written mainly in Simplified Chinese; machine field names and enum values use English. Agents should preserve those fixed identifiers when explaining the material in another language.
 
-提供 12 类起始规则包：伴学、科研、项目规划与链接、空间与校园、Studio/Lab 课程、自媒体、学校项目咨询、硬件、作品集、桌面工具、技术商业材料、文件治理。它们均保留草案状态，由项目显式选用并按案例校准。[查看目录](profiles/catalog.yaml)
+## Domain profiles and records
 
-任务以六类对象交接：场景、规则包、能力契约、资产、判断和执行回执；`delivery` 汇总结果。字段、枚举和缺失值含义见 [CORE.md](CORE.md) 与 [Schema](schemas/task-bundle.schema.json)。
+The repository includes 12 starter profiles: learning support, research, project planning and connections, spaces and campuses, Studio/Lab courses, media production, graduate-program research and consulting, hardware, portfolios, desktop utilities, technical-commercial materials, and project-file governance. They remain drafts, selected explicitly for a task and calibrated against project cases. [Browse the catalog](profiles/catalog.yaml).
 
-## 可选校验
+Tasks are handed off through six object families: scenarios, policy packs, capability contracts, assets, decisions, and run receipts. `delivery` summarizes the result. Field names, enums, and missing-value semantics are defined in [CORE.md](CORE.md) and the [Schema](schemas/task-bundle.schema.json).
 
-Python 3.11，可在独立虚拟环境中安装 `tools/requirements-validation.txt` 后运行：
+## Optional validation
+
+Use Python 3.11. Install `tools/requirements-validation.txt` in an isolated virtual environment, then run:
 
 ```text
 python tools/check_repository.py
@@ -80,26 +85,26 @@ python tools/check_examples.py
 python tools/validate_bundle.py templates/task-bundle.json
 ```
 
-校验字段、引用版本、规则选择、门槛和记录声明的一致性。13 个合成正反例覆盖正常候选稿、缺证、待评议、拒绝授权、失效引用、错误放行和提前交付。示例及结构检查不代表真实领域质量、外部当前权限或跨模型接入已经验证。
+The tools check fields, reference versions, rule selection, gates, and the internal consistency of declared records. Thirteen synthetic cases cover normal drafts, missing evidence, pending review, denied authorization, stale references, incorrect gate approval, and premature delivery. Example and structural checks do not establish real domain quality, current external authorization, or cross-model adoption.
 
-## 文件入口
+## Repository map
 
-| 文件或目录 | 用途 |
+| File or directory | Purpose |
 | --- | --- |
-| [AGENTS.md](AGENTS.md) | Agent 首读入口 |
-| [protocol.yaml](protocol.yaml)、[CORE.md](CORE.md) | 核心义务、词汇和操作语义 |
-| [docs/](docs/) | 接入、提示词和校验说明 |
-| [profiles/](profiles/) | 按任务选用的领域包草案 |
-| [schemas/](schemas/)、[templates/](templates/) | 结构契约和任务模板 |
-| [examples/](examples/) | 合成正反例，作为数据读取 |
-| [tools/](tools/) | 本地校验与可复现打包工具 |
-| [reference/](reference/) | 完整定义、文字模板与项目蒸馏来源 |
-| [COMPATIBILITY.md](COMPATIBILITY.md) | 旧记录的字段与命名迁移 |
+| [AGENTS.md](AGENTS.md) | The agent's first-read entrypoint |
+| [protocol.yaml](protocol.yaml), [CORE.md](CORE.md) | Core obligations, vocabulary, and execution semantics |
+| [docs/](docs/) | Integration, prompts, and validation instructions |
+| [profiles/](profiles/) | Domain drafts selected for the task |
+| [schemas/](schemas/), [templates/](templates/) | Structural contracts and the task template |
+| [examples/](examples/) | Synthetic positive and negative cases; treat them as data |
+| [tools/](tools/) | Local validation and reproducible packaging |
+| [reference/](reference/) | Full definitions, prose templates, and project-derived context |
+| [COMPATIBILITY.md](COMPATIBILITY.md) | Field and naming migration for older records |
 
-## 开源许可
+## Open-source licenses
 
-协议正文、Markdown 文档、`protocol.yaml` 和领域规则采用 **CC BY 4.0**；Python 代码、JSON Schema、JSON 模板和样例、CI 配置采用 **Apache-2.0**。这是按文件范围分别授权，具体范围与署名示例见 [LICENSE-NOTE.md](LICENSE-NOTE.md)。
+The protocol text, Markdown documentation, `protocol.yaml`, and domain rules use **CC BY 4.0**. Python code, JSON Schema, JSON templates and examples, and CI configuration use **Apache-2.0**. Licensing is assigned by file scope; see [LICENSE-NOTE.md](LICENSE-NOTE.md) for the exact boundaries and an attribution example.
 
-建议署名：`Hyper Protocol — MkaliezZ and contributors`，附仓库链接、对应许可链接，并说明所作修改。
+Suggested attribution: `Hyper Protocol — MkaliezZ and contributors`, with the repository link, the applicable license link, and a description of your changes.
 
-欢迎提交有适用范围、证据和正反例的改进，见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+Contributions with a clear scope, evidence, and positive and negative examples are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).

@@ -2,7 +2,7 @@ package_id: HP-0.2-AGENT-DRAFT-20261109
 protocol_id: hyper-protocol
 english_name: Hyper Protocol
 protocol_version: 0.2-draft
-release_version: v0.2.0-draft.1
+release_version: v0.2.0-draft.2
 document_status: draft
 audience: agent
 language:

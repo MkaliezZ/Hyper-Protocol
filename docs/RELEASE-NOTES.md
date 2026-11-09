@@ -1,6 +1,8 @@
-# Hyper Protocol v0.2.0-draft.1
+# Hyper Protocol v0.2.0-draft.2
 
-面向 Agent 的判断层、功能层、资产层协作协议，首次公开发行。
+本次更新提供完整中英文 README：README.md 为英文首页，README.zh-CN.md 为对应中文版，两份文档可相互切换，并一同包含在 Agent ZIP 中。
+
+This update adds complete English and Simplified Chinese READMEs, with language-switch links. Both files are included in the Agent ZIP. Protocol semantics and domain rule versions are unchanged.
 
 解压附件中的 Agent ZIP，将整个目录交给 Agent，并要求先读根目录 `AGENTS.md`。仓库 README 和 `docs/GETTING-STARTED.md` 提供可直接复制的接入提示词、按能力接入、任务记录、校验和恢复步骤。
 
