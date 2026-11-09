@@ -5,7 +5,7 @@
 ## 使用 GitHub 发行版
 
 ```text
-请使用 https://github.com/MkaliezZ/Hyper-Protocol 的 v0.2.0-draft.2。
+请使用 https://github.com/MkaliezZ/Hyper-Protocol 的 v0.2.0-draft.3。
 先获取该版本并读取根目录 AGENTS.md，再按路由加载核心语义和本次领域包。
 如无法获取文件，请说明具体缺失内容，不假装已读。
 
@@ -49,7 +49,7 @@
 ## English bootstrap
 
 ```text
-Use https://github.com/MkaliezZ/Hyper-Protocol at tag v0.2.0-draft.2.
+Use https://github.com/MkaliezZ/Hyper-Protocol at tag v0.2.0-draft.3.
 Fetch the actual files, start at AGENTS.md, and follow its task-scoped reading order.
 If you cannot access the files, identify the missing content instead of claiming to have read it.
 

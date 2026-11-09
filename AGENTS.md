@@ -2,7 +2,7 @@
 
 - Package: `HP-0.2-AGENT-DRAFT-20261109`
 - Protocol: `0.2-draft`
-- Release: `v0.2.0-draft.2`
+- Release: `v0.2.0-draft.3`
 - Audience: 能读取文件并遵守任务权限的 Agent
 Status: draft，供显式选用；放入目录不等于自动生效。
 

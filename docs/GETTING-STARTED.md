@@ -4,12 +4,12 @@
 
 ## 1 获取发行版
 
-推荐使用 [v0.2.0-draft.2](https://github.com/MkaliezZ/Hyper-Protocol/releases/tag/v0.2.0-draft.2)。选择名为 `Hyper-Protocol-v0.2.0-draft.2-agent.zip` 的附件，解压后保留整个目录结构。包内附完整性清单，Release 另附 ZIP 的 SHA-256。
+推荐使用 [v0.2.0-draft.3](https://github.com/MkaliezZ/Hyper-Protocol/releases/tag/v0.2.0-draft.3)。选择名为 `Hyper-Protocol-v0.2.0-draft.3-agent.zip` 的附件，解压后保留整个目录结构。包内附完整性清单，Release 另附 ZIP 的 SHA-256。
 
 如果 Agent 能使用 Git，可以让它自行执行：
 
 ```text
-git clone --branch v0.2.0-draft.2 --depth 1 https://github.com/MkaliezZ/Hyper-Protocol.git
+git clone --branch v0.2.0-draft.3 --depth 1 https://github.com/MkaliezZ/Hyper-Protocol.git
 ```
 
 仓库当前 `main` 可能继续变化。任务开始时记录实际 tag 或 commit；恢复任务时不要默默切换规则版本。
@@ -105,4 +105,4 @@ python3 -m venv .venv
 
 可以按对应许可采用、修改和再分发文件。规范文字及领域规则使用 CC BY 4.0；代码、Schema、JSON 模板与样例使用 Apache-2.0。保留对应许可和署名，公开改编时说明修改。项目自己的数据与成果按其权属管理，采用协议不改变它们的许可。
 
-详见 [许可范围](../LICENSE-NOTE.md) 与 [贡献说明](../CONTRIBUTING.md)。
+详见 [中文许可范围](../LICENSE-NOTE.zh-CN.md) 与 [中文贡献说明](../CONTRIBUTING.zh-CN.md)。两份文档顶部均可切换英文版。

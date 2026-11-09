@@ -6,14 +6,14 @@
 
 它让 Agent 在完成任务时说明：依据什么标准作出判断，怎样在授权范围内执行，以及材料和成果怎样追溯、复用与交接。适用于软件、研究、课程、内容生产、硬件应用和人工服务。
 
-协议版本：`0.2-draft` · 发行版本：`v0.2.0-draft.2` · [下载 Agent 包](https://github.com/MkaliezZ/Hyper-Protocol/releases/tag/v0.2.0-draft.2) · [接入说明](docs/GETTING-STARTED.md)
+协议版本：`0.2-draft` · 发行版本：`v0.2.0-draft.3` · [下载 Agent 包](https://github.com/MkaliezZ/Hyper-Protocol/releases/tag/v0.2.0-draft.3) · [接入说明](docs/GETTING-STARTED.md)
 
 ## 直接交给 Agent
 
 将下面的内容和你的项目材料一起发给 Agent：
 
 ```text
-请将 https://github.com/MkaliezZ/Hyper-Protocol 的 v0.2.0-draft.2
+请将 https://github.com/MkaliezZ/Hyper-Protocol 的 v0.2.0-draft.3
 作为本次任务的协作协议，获取该版本后先读取根目录 AGENTS.md，
 再按入口只加载相关领域包，不要一次读取全部参考附件。
 
@@ -100,8 +100,8 @@ python tools/validate_bundle.py templates/task-bundle.json
 
 ## 开源许可
 
-协议正文、Markdown 文档、`protocol.yaml` 和领域规则采用 **CC BY 4.0**；Python 代码、JSON Schema、JSON 模板和样例、CI 配置采用 **Apache-2.0**。这是按文件范围分别授权，具体范围与署名示例见 [LICENSE-NOTE.md](LICENSE-NOTE.md)。
+协议正文、Markdown 文档、`protocol.yaml` 和领域规则采用 **CC BY 4.0**；Python 代码、JSON Schema、JSON 模板和样例、CI 配置采用 **Apache-2.0**。这是按文件范围分别授权，具体范围与署名示例见 [中文许可说明](LICENSE-NOTE.zh-CN.md)（[English](LICENSE-NOTE.md)）。
 
 建议署名：`Hyper Protocol — MkaliezZ and contributors`，附仓库链接、对应许可链接，并说明所作修改。
 
-欢迎提交有适用范围、证据和正反例的改进，见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+欢迎提交有适用范围、证据和正反例的改进，见 [中文贡献指南](CONTRIBUTING.zh-CN.md)（[English](CONTRIBUTING.md)）。

@@ -6,14 +6,14 @@
 
 Hyper Protocol helps agents explain the criteria behind their decisions, carry out work within the authorized scope, and preserve materials and results for traceability, reuse, and handoff. It applies to software, research, courses, content production, hardware applications, and human-delivered services.
 
-Protocol: `0.2-draft` · Release: `v0.2.0-draft.2` · [Download the Agent package](https://github.com/MkaliezZ/Hyper-Protocol/releases/tag/v0.2.0-draft.2) · [Integration guide](docs/GETTING-STARTED.md)
+Protocol: `0.2-draft` · Release: `v0.2.0-draft.3` · [Download the Agent package](https://github.com/MkaliezZ/Hyper-Protocol/releases/tag/v0.2.0-draft.3) · [Integration guide](docs/GETTING-STARTED.md)
 
 ## Hand it directly to an agent
 
 Send the following prompt together with your project materials:
 
 ```text
-Use https://github.com/MkaliezZ/Hyper-Protocol at tag v0.2.0-draft.2
+Use https://github.com/MkaliezZ/Hyper-Protocol at tag v0.2.0-draft.3
 as the collaboration protocol for this task. Fetch that version and read
 AGENTS.md at its root, then load only the domain profiles relevant to the task.
 Do not read all reference attachments by default.
@@ -103,8 +103,8 @@ The tools check fields, reference versions, rule selection, gates, and the inter
 
 ## Open-source licenses
 
-The protocol text, Markdown documentation, `protocol.yaml`, and domain rules use **CC BY 4.0**. Python code, JSON Schema, JSON templates and examples, and CI configuration use **Apache-2.0**. Licensing is assigned by file scope; see [LICENSE-NOTE.md](LICENSE-NOTE.md) for the exact boundaries and an attribution example.
+The protocol text, Markdown documentation, `protocol.yaml`, and domain rules use **CC BY 4.0**. Python code, JSON Schema, JSON templates and examples, and CI configuration use **Apache-2.0**. Licensing is assigned by file scope; see the [English license scope](LICENSE-NOTE.md) ([简体中文](LICENSE-NOTE.zh-CN.md)) for the exact boundaries and an attribution example.
 
 Suggested attribution: `Hyper Protocol — MkaliezZ and contributors`, with the repository link, the applicable license link, and a description of your changes.
 
-Contributions with a clear scope, evidence, and positive and negative examples are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
+Contributions with a clear scope, evidence, and positive and negative examples are welcome. See the [English contribution guide](CONTRIBUTING.md) ([简体中文](CONTRIBUTING.zh-CN.md)).

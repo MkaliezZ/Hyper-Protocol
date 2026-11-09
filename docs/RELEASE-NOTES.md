@@ -1,8 +1,8 @@
-# Hyper Protocol v0.2.0-draft.2
+# Hyper Protocol v0.2.0-draft.3
 
-本次更新提供完整中英文 README：README.md 为英文首页，README.zh-CN.md 为对应中文版，两份文档可相互切换，并一同包含在 Agent ZIP 中。
+本次更新提供完整中英文贡献指南和许可范围说明：默认 .md 文件使用英文，.zh-CN.md 文件使用简体中文。文档顶部可互相切换，中英文 README 和接入指南链接到对应语言，新增文档一同进入 Agent ZIP。
 
-This update adds complete English and Simplified Chinese READMEs, with language-switch links. Both files are included in the Agent ZIP. Protocol semantics and domain rule versions are unchanged.
+This update adds complete English and Simplified Chinese contribution guides and license-scope explanations, with language-switch links and matching README links. Both language versions are included in the Agent ZIP. The original license texts, licensing terms, protocol semantics, and domain rule versions are unchanged.
 
 解压附件中的 Agent ZIP，将整个目录交给 Agent，并要求先读根目录 `AGENTS.md`。仓库 README 和 `docs/GETTING-STARTED.md` 提供可直接复制的接入提示词、按能力接入、任务记录、校验和恢复步骤。
 
